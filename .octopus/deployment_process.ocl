@@ -12,5 +12,16 @@ step "run-a-script" {
             Octopus.Action.Script.Syntax = "PowerShell"
         }
         worker_pool = "default-worker-pool-windows"
+
+        packages "MyExamplePackage" {
+            acquisition_location = "NotAcquired"
+            feed = "danefalvos-github-feed"
+            package_id = "danefalvo/MyExamplePackage"
+            properties = {
+                Extract = "True"
+                Purpose = ""
+                SelectionMode = "immediate"
+            }
+        }
     }
 }
