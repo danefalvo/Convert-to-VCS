@@ -1,0 +1,7 @@
+variable "variable" {
+    value "Hello" {}
+}
+
+variable "variable2" {
+    value " world" {}
+}
